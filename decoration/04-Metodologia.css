@@ -1,0 +1,81 @@
+    body {
+        color: white;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .92);
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    a {
+        color: white;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        text-decoration: none;
+    }
+    a:hover {
+        color: rgb(7, 7, 220)
+    }
+    .como-trabalhamos {
+        margin-right: 22%;
+        margin-left: 22%;
+        margin-bottom: 50px;
+        padding-top: 80px;
+        line-height: 1.5;
+        border: white solid 3px;
+        border-radius: 15px;
+        padding: 20px;
+    }
+    .nossa-metodologia {
+        margin-right: 22%;
+        margin-left: 22%;
+        margin-bottom: 50px;
+        padding-top: 20px;
+        line-height: 1.5;
+        border: white solid 3px;
+        border-radius: 15px;
+        padding: 20px;
+    }
+    .pode-contar-com-a-gente {
+        width: 620px;
+        height: 310px;
+        margin-right: 22%;
+        margin-left: 22%;
+        margin-bottom: 50px;
+        padding-top: 20px;
+        line-height: 1.5;
+        border: white solid 3px;
+        border-radius: 15px;
+        margin-bottom: 80px;
+    }
+    .lista1 {
+        width: 400px;
+        height: 200px;
+        text-align: justify;
+        float: left;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 100px;
+        margin-left: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .lista2 {
+        width: 400px;
+        height: 200px;
+        text-align: justify;
+        float: right;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        margin-bottom: 100px;
+        margin-right: ;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    footer {
+        text-align: center;
+        margin-top: 300px;
+        padding-top: 200px;
+        width: 100%;
+    }

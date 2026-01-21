@@ -1,0 +1,53 @@
+    * {
+    margin-top: 0px;
+    align-items: center;
+    }
+    body {
+        color: white;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .92);
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;;
+     }
+     .logo-cover {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.92);
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    nav {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        
+        
+    }
+    .nyc {
+        position: sticky (top);
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 370px;
+        width: 100%;
+    }
+    a {
+        color: white;
+        align-items: center;
+        text-decoration: none;
+    }
+    a:hover {
+        color: rgb(7, 7, 220)
+    }
+    .scope {
+        border: 10px solid white;
+        padding: 30px;
+        width: 70%;
+        line-height: 1.5;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
