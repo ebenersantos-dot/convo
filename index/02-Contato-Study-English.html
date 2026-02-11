@@ -1,70 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Este é um site referente a Empresa Study English onde compartilhamos as informações refente aos nossos serviços para pessoas que querem aprender Inglês">
-    <meta name="keywords" content="Inglês, aprender Inglês, falar inglês, Inglês fluente, Inglês técnico">
-    <title>Contato - Study English</title>
-    <link rel="stylesheet" href="02-Contato-Study-English.css">
+    <meta name="description" content="Entre em contato com a Study English e receba um plano de inglês personalizado para sua rotina.">
+    <meta name="keywords" content="contato study english, aulas de inglês online, inglês personalizado">
+    <title>Contato | Study English</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-     <a href="01-Início-Study-English.html"><img src="./img/banner-header-logo 2.png" alt="Logo em estilo banner da Study English" width="600"></a>
-        <nav><h2 class="links-nav">
-            <a href="01-Início-Study-English.html">Início</a>
-            <a href="02-Contato-Study-English.html">Contato</a>
-            <a href="03-Sobre-a-Study-English.html">Sobre a Study English</a>
-            <a href="04-Metodologia.html">Metodologia</a><br>
-        </h2></nav><br>
-    </header><br>
-    <h2>Preencha o formuário abaixo com suas informações e em breve entraremos em contato para agendar um chat</h2><br>
-    <div class="formulario">
-        <form action="send-information" id="send-information" method="post">
-            <div class="container">
-                <div class="nome-phone">
-                    <label for="name">Nome Completo:</label>
-                    <input type="text" id="name" name="nome"><br>
-                    <label for="phone-number">Telefone:</label>
-                    <input type="text" id="phone-number" name="phone-number">
-                </div>
-                <div class="email-level">
-                    <label for="email">Email:</label>
-                    <input type="text" id="Email" name="email">
-                    <label for="level">Nível de Inglês:</label>
-                    <input type="text" id="level" name="level">
-                </div>
-                <label type="orig-language">Idioma de Origem:</label>
-                <select id="orig-language" name="orig-language">
-                    <option value="Selecione">Selecione
-                    <option value="português">Português
-                    <option value="Espanhol">Español
-                    <option value="Francais">Francais
-                    </option>
-                </select>
-                </div>
+<body data-page="contato">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="01-Início-Study-English.html">
+                <img src="./img/Logo-sem-fundo.png" alt="Logo da Study English">
+                <span>Study English</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="sr-only">Abrir menu</span>
+            </button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
+                <a data-nav="inicio" href="01-Início-Study-English.html">Início</a>
+                <a data-nav="metodologia" href="04-Metodologia.html">Metodologia</a>
+                <a data-nav="sobre" href="03-Sobre-a-Study-English.html">Sobre</a>
+                <a data-nav="contato" href="02-Contato-Study-English.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section-padding">
+        <section class="container contact-grid">
+            <div class="contact-copy reveal">
+                <p class="eyebrow">Fale com a Study English</p>
+                <h1>Vamos construir o seu plano de inglês personalizado.</h1>
+                <p>
+                    Preencha o formulário e retornaremos para agendar um bate-papo inicial.
+                    Nossa proposta é objetiva: aulas remotas, horários flexíveis e metodologia personalizada para sua rotina.
+                </p>
+
+                <ul class="benefit-list">
+                    <li>Remote English classes com acompanhamento próximo.</li>
+                    <li>Flexible schedule para encaixar os estudos na semana.</li>
+                    <li>Aulas personalizadas por objetivo e nível.</li>
+                    <li>Metodologia adaptável com foco em evolução contínua.</li>
+                </ul>
             </div>
-            <h3>________________________________________________________________________________________________</h3>
-            <h3><label for="message">Descreva brevemente seus objetivos com a lígua Inglesa</label></h3><br>
-            <textarea id="message" name="message" rows="10" cols="60">
-            </textarea><br><br>
-            <input type="submit" value="Enviar" class="Enviar">
-        </form>
-    </div>
-        <script>
-        document.getElementById("send-information").addEventListener("submit", function
-            (event) {
-                var form = document.getElementById("send-information");
-                if (form.name.value === '') {
-                    event.preventDefault();
-                    alert('Por facvor, preencha todos os campos corretamente.');
-                }
-        });
-    </script>
-    <br><br><br><br>
-    <footer>Todos os direitos reservado a Study English</footer>
-    
+
+            <form id="send-information" class="contact-form reveal delay-1" data-contact-form novalidate>
+                <div class="field">
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" name="nome" autocomplete="name" required>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="phone-number">WhatsApp</label>
+                        <input type="tel" id="phone-number" name="whatsapp" autocomplete="tel" placeholder="(00) 00000-0000" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                </div>
+
+                <div class="field-row">
+                    <div class="field">
+                        <label for="level">Nível de inglês</label>
+                        <select id="level" name="nivel" required>
+                            <option value="">Selecione</option>
+                            <option value="iniciante">Iniciante</option>
+                            <option value="basico">Básico</option>
+                            <option value="intermediario">Intermediário</option>
+                            <option value="avancado">Avançado</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="availability">Disponibilidade</label>
+                        <select id="availability" name="disponibilidade" required>
+                            <option value="">Selecione</option>
+                            <option value="manha">Manhã</option>
+                            <option value="tarde">Tarde</option>
+                            <option value="noite">Noite</option>
+                            <option value="variavel">Horários variáveis</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="message">Objetivo principal com o inglês</label>
+                    <textarea id="message" name="mensagem" rows="6" required placeholder="Ex.: quero melhorar minha comunicação em reuniões e entrevistas."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar solicitação</button>
+                <p class="form-feedback" data-form-feedback aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Study English <span id="year"></span> © Todos os direitos reservados.</p>
+            <a href="04-Metodologia.html">Ver metodologia</a>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
 </body>
 </html>
-
-    

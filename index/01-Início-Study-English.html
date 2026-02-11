@@ -1,33 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Este é um site referente a Empresa Study English onde compartilhamos as informações refente aos nossos serviços para pessoas que querem aprender Inglês">
-    <meta name="keywords" content="Inglês, aprender Inglês, falar inglês, Inglês fluente, Inglês técnico">
-    <title>Início - Study English</title>
-<link rel="stylesheet" href="01-Início-Study-English.css">
+    <meta name="description" content="Aulas de inglês online com metodologia personalizada para profissionais que buscam fluência com foco em resultados reais.">
+    <meta name="keywords" content="inglês online, inglês para profissionais, aulas remotas, inglês personalizado, estudo de inglês">
+    <title>Início | Study English</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="logo-cover">
-    <header>
-        <a href="01-Início-Study-English.html"><img src="./img/banner-header-logo 2.png" alt="Logo em estilo banner da Study English" width="600"></a>
+<body data-page="inicio">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="01-Início-Study-English.html">
+                <img src="./img/Logo-sem-fundo.png" alt="Logo da Study English">
+                <span>Study English</span>
+            </a>
 
-        <nav><h2 class="links-nav">
-            <a href="01-Início-Study-English.html">Início</a>
-            <a href="02-Contato-Study-English.html">Contato</a>
-            <a href="03-Sobre-a-Study-English.html">Sobre a Study English</a>
-            <a href="04-Metodologia.html">Metodologia</a><br>
-        </h2></nav><br>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="sr-only">Abrir menu</span>
+            </button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
+                <a data-nav="inicio" href="01-Início-Study-English.html">Início</a>
+                <a data-nav="metodologia" href="04-Metodologia.html">Metodologia</a>
+                <a data-nav="sobre" href="03-Sobre-a-Study-English.html">Sobre</a>
+                <a data-nav="contato" href="02-Contato-Study-English.html">Contato</a>
+            </nav>
+        </div>
     </header>
-    </div>
-    <div>
-        <img class="nyc" src="./img/NYC 2.png" alt="Foto da skyline de Nova York"><br>
-    </div>
-    <div class="scope">
-        <h1>A Importância do Inglês para Você, Por Nós Compreendida!</h1><br>
-        <h3>O inglês é a língua mais falada no mundo, sendo o idioma oficial de mais de 50 países e a segunda língua em muitos outros. Dominar o inglês abre portas para oportunidades acadêmicas, profissionais e culturais, permitindo que você se conecte com pessoas de diferentes partes do mundo. Além disso, o inglês é a língua predominante na internet, na ciência, na tecnologia e nos negócios globais. Aprender inglês não só amplia seus horizontes, mas também melhora suas habilidades cognitivas e aumenta sua confiança ao se comunicar em um cenário globalizado. Na Study English, entendemos a importância do inglês para o seu crescimento pessoal e profissional, e estamos aqui para ajudá-lo a alcançar seus objetivos linguísticos.</h3>
-    </div>
-    <footer>Todos os direitos reservado a Study English</footer>
+
+    <main>
+        <section class="hero section-padding">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Inglês para vida real</p>
+                    <h1>Aulas remotas com estratégia personalizada para você falar inglês com segurança.</h1>
+                    <p class="hero-text">
+                        Na Study English, você evolui com foco no seu contexto profissional. Nada de fórmula pronta: cada plano é adaptado ao seu nível,
+                        sua rotina e seus objetivos.
+                    </p>
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="02-Contato-Study-English.html">Quero minha avaliação</a>
+                        <a class="btn btn-ghost" href="04-Metodologia.html">Conhecer metodologia</a>
+                    </div>
+                    <ul class="hero-metrics">
+                        <li>
+                            <strong data-counter="100">100</strong>
+                            <span>% online e ao vivo</span>
+                        </li>
+                        <li>
+                            <strong>1:1</strong>
+                            <span>ou grupos reduzidos</span>
+                        </li>
+                        <li>
+                            <strong data-counter="60">60</strong>
+                            <span>min focados em prática real</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-media reveal delay-1">
+                    <img src="./img/london-skyline.avif" alt="Skyline de Nova York representando oportunidades globais com o inglês">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Seu diferencial competitivo</p>
+                    <h2>Mais do que aprender inglês: usar inglês com confiança no dia a dia.</h2>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card reveal">
+                        <h3>Remote English classes</h3>
+                        <p>
+                            Aulas remotas com interação em tempo real, sem perder qualidade. Estude de onde estiver e mantenha consistência.
+                        </p>
+                    </article>
+
+                    <article class="feature-card reveal delay-1">
+                        <h3>Flexible schedule</h3>
+                        <p>
+                            Horários flexíveis para encaixar os estudos na sua rotina profissional, com planejamento viável e sustentável.
+                        </p>
+                    </article>
+
+                    <article class="feature-card reveal delay-2">
+                        <h3>Personalized classes</h3>
+                        <p>
+                            Conteúdo alinhado ao seu momento: reuniões, apresentações, entrevistas, viagens ou comunicação com clientes.
+                        </p>
+                    </article>
+
+                    <article class="feature-card reveal delay-3">
+                        <h3>Personalized methodology</h3>
+                        <p>
+                            Diagnóstico inicial, plano individual e ajustes contínuos para acelerar sua evolução com foco total em resultado.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding section-surface">
+            <div class="container process-grid">
+                <div class="process-copy reveal">
+                    <p class="eyebrow">Como funciona</p>
+                    <h2>Um processo simples, direto e orientado por progresso.</h2>
+                    <p>
+                        Você recebe orientação clara desde a primeira conversa. Cada etapa foi pensada para manter você motivado e com evolução visível.
+                    </p>
+                </div>
+
+                <ol class="process-steps">
+                    <li class="reveal">
+                        <h3>1. Diagnóstico estratégico</h3>
+                        <p>Avaliamos seu nível atual, seus desafios e os cenários em que você mais precisa usar inglês.</p>
+                    </li>
+                    <li class="reveal delay-1">
+                        <h3>2. Plano personalizado</h3>
+                        <p>Definimos trilha, ritmo e foco das aulas com metas realistas e alinhadas ao seu momento.</p>
+                    </li>
+                    <li class="reveal delay-2">
+                        <h3>3. Prática guiada</h3>
+                        <p>Você treina listening, speaking, reading e writing com situações reais do seu contexto.</p>
+                    </li>
+                    <li class="reveal delay-3">
+                        <h3>4. Ajustes e evolução contínua</h3>
+                        <p>Monitoramos resultados, reforçamos pontos críticos e ajustamos a estratégia sempre que necessário.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container cta-banner reveal">
+                <h2>Comece com um plano que respeita seu tempo e acelera seu inglês.</h2>
+                <p>Fale com a Study English e agende sua avaliação inicial.</p>
+                <a class="btn btn-primary" href="02-Contato-Study-English.html">Agendar agora</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Study English <span id="year"></span> © Todos os direitos reservados.</p>
+            <a href="02-Contato-Study-English.html">Agendar avaliação</a>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
 </body>
 </html>

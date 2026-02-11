@@ -1,42 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Este é um site referente a Empresa Study English onde compartilhamos as informações refente aos nossos serviços para pessoas que querem aprender Inglês">
-    <meta name="keywords" content="Inglês, aprender Inglês, falar inglês, Inglês fluente, Inglês técnico">
-    <title>Contato - Study English</title>
-<link rel="stylesheet" href="03-Sobre-a-Study-English.css">
+    <meta name="description" content="Conheça a Study English, nossa proposta, valores e compromisso com o ensino personalizado de inglês.">
+    <meta name="keywords" content="sobre study english, inglês personalizado, professor de inglês, inglês profissional">
+    <title>Sobre | Study English</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <a href="01-Início-Study-English.html"><img src="./img/banner-header-logo 2.png" alt="Logo em estilo banner da Study English" width="600"></a>
-        <nav><h2 class="links-nav">
-            <a href="01-Início-Study-English.html">Início</a>
-            <a href="02-Contato-Study-English.html">Contato</a>
-            <a href="03-Sobre-a-Study-English.html">Sobre a Study English</a>
-            <a href="04-Metodologia.html">Metodologia</a><br>
-        </h2></nav><br>
+<body data-page="sobre">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="01-Início-Study-English.html">
+                <img src="./img/Logo-sem-fundo.png" alt="Logo da Study English">
+                <span>Study English</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="sr-only">Abrir menu</span>
+            </button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
+                <a data-nav="inicio" href="01-Início-Study-English.html">Início</a>
+                <a data-nav="metodologia" href="04-Metodologia.html">Metodologia</a>
+                <a data-nav="sobre" href="03-Sobre-a-Study-English.html">Sobre</a>
+                <a data-nav="contato" href="02-Contato-Study-English.html">Contato</a>
+            </nav>
+        </div>
     </header>
-    <div class="descricao">
-        <h1 style="text-align: center;">Sobre a Study Englsih</h1>
-        <h3>A Study English é uma empresa especializada em ensino de inglês para profissionais que buscam aprimorar suas habilidades linguísticas e alcançar fluência no idioma. Fundada por Ebener Santos, a empresa tem como missão proporcionar uma experiência de aprendizado eficaz e personalizada, adaptada às necessidades individuais de cada aluno. Com uma equipe de instrutores altamente qualificados e uma abordagem inovadora, a Study English oferece cursos que combinam teoria e prática, focando em situações do cotidiano profissional. A empresa valoriza a diversidade cultural e promove um ambiente inclusivo, onde os alunos podem desenvolver suas competências linguísticas com confiança. Além disso, a Study English utiliza recursos tecnológicos avançados para facilitar o aprendizado, tornando-o acessível e conveniente para profissionais ocupados. Com um compromisso firme com a excelência educacional, a Study English se destaca como uma referência no ensino de inglês para profissionais em busca de sucesso global.</h3>
-    </div>
-    <div class="missao">
-        <div class="quem-somos">
-            <h2 style="text-align: center;">Quem Somos</h2>
-                <h3>Somos uma empresa comprometida em trazer resultados reais e uma transformação na forma como nossos clientes ouvem, falam, e até mesmo enxergam a língua inglesa.</h3>
+
+    <main class="section-padding">
+        <section class="container section-head reveal">
+            <p class="eyebrow">Sobre a Study English</p>
+            <h1>Ensino de inglês com foco em autonomia, clareza e performance.</h1>
+            <p>
+                A Study English nasceu para apoiar profissionais que precisam do inglês como ferramenta de crescimento.
+                Nossa proposta combina acompanhamento próximo, método sob medida e prática aplicada ao mundo real.
+            </p>
+        </section>
+
+        <section class="container founder-grid">
+            <article class="content-card reveal">
+                <h2>Quem somos</h2>
+                <p>
+                    Somos uma escola com atendimento humano e estratégico, comprometida com evolução consistente.
+                    Trabalhamos para que cada aluno transforme conhecimento em ação: ouvir melhor, falar com confiança e se comunicar com impacto.
+                </p>
+            </article>
+
+            <article class="content-card reveal delay-1">
+                <h2>Nosso compromisso</h2>
+                <p>
+                    Entendemos as pressões da rotina profissional. Por isso, unimos flexibilidade, clareza didática e feedback contínuo
+                    para que você avance no inglês de forma prática e sustentável.
+                </p>
+            </article>
+        </section>
+
+        <section class="container section-padding-sm">
+            <article class="profile-card reveal">
+                <img src="./img/00-foto-de-perfil-ebener 2.jpg" alt="Ebener Santos, fundador da Study English">
+                <div>
+                    <p class="eyebrow">Por trás da Study English</p>
+                    <h2>Ebener Santos</h2>
+                    <p>
+                        Fundador da Study English, Ebener atua no desenvolvimento de alunos que precisam aplicar inglês com segurança
+                        no ambiente profissional. O foco está em reduzir bloqueios, aumentar fluência e construir comunicação natural.
+                    </p>
+                    <a class="btn btn-ghost" href="https://www.linkedin.com/in/ebener-santos-0a8377164/?originalSubdomain=ca" target="_blank" rel="noopener noreferrer">
+                        Ver perfil no LinkedIn
+                    </a>
+                </div>
+            </article>
+        </section>
+
+        <section class="container value-grid">
+            <article class="value-card reveal">
+                <h3>Clareza</h3>
+                <p>Você entende por que está estudando cada conteúdo e como isso se conecta aos seus objetivos.</p>
+            </article>
+            <article class="value-card reveal delay-1">
+                <h3>Consistência</h3>
+                <p>Ritmo realista de estudo para manter evolução sem sobrecarga.</p>
+            </article>
+            <article class="value-card reveal delay-2">
+                <h3>Resultado</h3>
+                <p>Menos teoria solta e mais aplicação prática em cenários reais de comunicação.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>Study English <span id="year"></span> © Todos os direitos reservados.</p>
+            <a href="02-Contato-Study-English.html">Falar com a equipe</a>
         </div>
-        <div class="nosso-compromisso">
-            <h2 style="text-align: center;">Nosso Compromisso</h2>
-                <h3>Compreendemos os desafios da vida de um profissional que tem inglês como sua ferramenta de trabalho, e também os desafios que se encontram no ambiente de trabalho estrangeiro.</h3>
-        </div>
-    </div>
-    <div class="por-tras-da-SE">
-        <h2>Por Trás da Study English</h2>
-        <a href="https://www.linkedin.com/in/ebener-santos-0a8377164/?originalSubdomain=ca" target="_blank">
-        <img src="00-foto-de-perfil-ebener.jpg" width="200" alt="Foto de perfil Ebener Santos - Fundador da Study English"></a><br>
-    <p>Ebener Santos - Fundador da Study English</p>
-    </div>
-    <footer>Todos os direitos reservado a Study English</footer>
-</body>    
+    </footer>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
