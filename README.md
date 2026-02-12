@@ -101,7 +101,7 @@ study-english-website/
     ├── styles.css
     ├── main.js
     └── img/
-        ├── Logo sem fundo.png
+        ├── Logo-sem-fundo.png
         ├── Study-English-Logo 2.png
         ├── banner-header-logo 2.png
         ├── NYC 2.png
@@ -123,7 +123,7 @@ study-english-website/
 
 ## Customizações Rápidas
 
-- **Logo principal**: troque `index/img/Logo sem fundo.png`.
+- **Logo principal**: troque `index/img/Logo-sem-fundo.png`.
 - **Paleta de cores**: ajuste variáveis no topo de `index/styles.css` (`:root`).
 - **Textos comerciais**: edite blocos de copy nos arquivos HTML.
 - **Comportamento JS**: personalize `index/main.js` (FAQ, animações, menu, validação).
