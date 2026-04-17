@@ -1,149 +1,107 @@
-# Study English Website
+# CONVO
 
-Landing page institucional da **Study English**, voltada ao público brasileiro que busca aulas de inglês online com foco em aplicação real, flexibilidade de agenda e metodologia personalizada.
+Site institucional da **CONVO** — plataforma de conversação em inglês para profissionais. Construído com HTML, CSS e JavaScript puro, sem dependências de framework.
 
-## Sumário
+## Páginas
 
-- [Visão Geral](#visão-geral)
-- [Objetivos do Projeto](#objetivos-do-projeto)
-- [Layout e Estrutura das Páginas](#layout-e-estrutura-das-páginas)
-- [Funcionalidades](#funcionalidades)
-- [Tecnologias e Ferramentas](#tecnologias-e-ferramentas)
-- [Estrutura de Pastas](#estrutura-de-pastas)
-- [Como Executar Localmente](#como-executar-localmente)
-- [Customizações Rápidas](#customizações-rápidas)
-- [Roadmap](#roadmap)
-- [Autor](#autor)
-- [Licença](#licença)
-
-## Visão Geral
-
-O site foi construído para apresentar a marca Study English com uma comunicação mais comercial e objetiva, destacando:
-
-- aulas remotas (`Remote English classes`)
-- horários flexíveis (`Flexible schedule`)
-- aulas personalizadas
-- metodologia personalizada
-
-A proposta visual segue um estilo moderno, com identidade forte, boa leitura em mobile e foco em conversão para contato.
-
-## Objetivos do Projeto
-
-- Posicionar a Study English de forma profissional no ambiente digital.
-- Comunicar proposta de valor de forma clara e persuasiva.
-- Gerar leads através da página de contato.
-- Reforçar confiança com conteúdo institucional (sobre, metodologia, FAQ).
-- Entregar experiência responsiva e dinâmica com JavaScript puro.
-
-## Layout e Estrutura das Páginas
-
-### 1) Início
-Arquivo: `index/01-Início-Study-English.html`
-
-- Hero com proposta principal e CTAs.
-- Bloco de diferenciais comerciais.
-- Seção "Como funciona" em etapas.
-- Banner final de conversão.
-
-### 2) Contato
-Arquivo: `index/02-Contato-Study-English.html`
-
-- Mensagem comercial de convite.
-- Lista de benefícios.
-- Formulário com validação no front-end.
-- Feedback visual de envio.
-
-### 3) Sobre
-Arquivo: `index/03-Sobre-a-Study-English.html`
-
-- Apresentação institucional da marca.
-- Seções "Quem somos" e "Nosso compromisso".
-- Bloco de perfil do fundador.
-- Valores da escola.
-
-### 4) Metodologia
-Arquivo: `index/04-Metodologia.html`
-
-- Explicação da metodologia em pilares.
-- Competências trabalhadas (`Listening`, `Speaking`, `Reading`, `Writing`, etc.).
-- FAQ interativo.
-- CTA para contato.
+| Arquivo | Rota | Conteúdo |
+|---|---|---|
+| `01-inicio-convo.html` | Início | Hero, diferenciais, como funciona, CTA |
+| `02-contato-convo.html` | Contato | Formulário de solicitação de conversa inicial |
+| `03-sobre-convo.html` | Sobre | Manifesto, fundador, valores |
+| `04-metodologia-convo.html` | Metodologia | Pilares do método, competências, FAQ |
 
 ## Funcionalidades
 
-- Header com destaque de link ativo por página.
-- Menu mobile com botão hambúrguer.
-- Efeito visual no header ao scroll.
-- Animações de entrada com `IntersectionObserver`.
-- Contadores animados na página inicial.
-- FAQ expansível na página de metodologia.
-- Validação de formulário usando API nativa do navegador (`checkValidity` + `reportValidity`).
-- Atualização automática do ano no rodapé via JavaScript.
+- Header fixo com efeito de blur ao scroll e link ativo por página
+- Menu mobile com hambúrguer
+- Animações de entrada via `IntersectionObserver`
+- Contadores animados (métricas do hero)
+- FAQ expansível com animação de altura
+- Validação de formulário nativa (`checkValidity` + `reportValidity`)
+- Ano do footer atualizado automaticamente
 
-## Tecnologias e Ferramentas
+## Stack
 
-- **HTML5** (estrutura semântica)
-- **CSS3** (layout responsivo, variáveis CSS, grid/flex, efeitos visuais)
-- **JavaScript Vanilla** (interações e comportamento dinâmico)
-- **Google Fonts** (`Manrope` e `Playfair Display`)
+- **HTML5** semântico
+- **CSS3** com custom properties — sem framework
+- **JavaScript Vanilla**
+- **Google Fonts** — `Sora` (display) e `Inter` (UI)
 
-## Estrutura de Pastas
+## Estrutura
 
-```bash
+```
 study-english-website/
 ├── README.md
 ├── LICENSE
 └── index/
-    ├── 01-Início-Study-English.html
-    ├── 02-Contato-Study-English.html
-    ├── 03-Sobre-a-Study-English.html
-    ├── 04-Metodologia.html
-    ├── styles.css
+    ├── 01-inicio-convo.html
+    ├── 02-contato-convo.html
+    ├── 03-sobre-convo.html
+    ├── 04-metodologia-convo.html
     ├── main.js
+    ├── styles.css              ← entry point (só @imports)
+    ├── styles/
+    │   ├── base.css            ← tokens CSS + reset
+    │   ├── layout.css          ← container, section utilities
+    │   ├── typography.css      ← headings, p, eyebrow
+    │   ├── buttons.css         ← btn, primary, ghost, inverse
+    │   ├── header.css          ← header, nav, brand
+    │   ├── hero.css            ← hero section + speech bubble
+    │   ├── components.css      ← cards, FAQ, contato, CTA, footer
+    │   ├── modal.css           ← modal (pronto para uso)
+    │   └── responsive.css      ← animações + media queries
     └── img/
-        ├── Logo-sem-fundo.png
-        ├── Study-English-Logo 2.png
-        ├── banner-header-logo 2.png
-        ├── NYC 2.png
+        ├── convoRound.png
+        ├── convoRoundTranspBG.png
+        ├── convoSquare.png
+        ├── convoSquareTranspBG.png
         └── 00-foto-de-perfil-ebener 2.jpg
 ```
 
-## Como Executar Localmente
+## Como rodar localmente
 
-### Opção 1: Abrir direto no navegador
+**Opção 1 — direto no navegador**
 
-1. Acesse a pasta `index`.
-2. Abra o arquivo `01-Início-Study-English.html` no navegador.
+Abra `index/01-inicio-convo.html` no browser.
 
-### Opção 2: VS Code com Live Server (recomendado)
+**Opção 2 — Live Server (recomendado)**
 
-1. Abra o projeto no VS Code.
-2. Clique com botão direito em `index/01-Início-Study-English.html`.
-3. Selecione **Open with Live Server**.
+1. Abra o projeto no VS Code
+2. Clique com botão direito em `index/01-inicio-convo.html`
+3. Selecione **Open with Live Server**
 
-## Customizações Rápidas
+## Design system
 
-- **Logo principal**: troque `index/img/Logo-sem-fundo.png`.
-- **Paleta de cores**: ajuste variáveis no topo de `index/styles.css` (`:root`).
-- **Textos comerciais**: edite blocos de copy nos arquivos HTML.
-- **Comportamento JS**: personalize `index/main.js` (FAQ, animações, menu, validação).
+Os tokens de cor, tipografia e espaçamento ficam em `index/styles/base.css` (bloco `:root`). Não use valores hex diretamente nos outros arquivos — use as variáveis.
+
+```css
+/* Cores principais */
+--cp-500: #7B2CBF;   /* roxo primário */
+--cg-900: #18181B;   /* grafite — texto principal */
+--ci:     #FAFAFA;   /* canvas de fundo */
+--grad: linear-gradient(135deg, #5A189A 0%, #9D4EDD 100%);
+
+/* Fontes */
+font-family: 'Sora'  /* display / headings */
+font-family: 'Inter' /* UI / corpo */
+```
+
+Diretrizes completas de marca, tom de voz e convenções de código estão documentadas em `CLAUDE.md`.
 
 ## Roadmap
 
-- [ ] Integrar formulário com backend real (e-mail/CRM/WhatsApp API).
-- [ ] Adicionar métricas de conversão (Google Analytics / Meta Pixel).
-- [ ] Criar seção de depoimentos reais de alunos.
-- [ ] Incluir página de blog/artigos para estratégia de SEO.
-- [ ] Melhorar acessibilidade com auditoria completa (Lighthouse + WCAG).
+- [ ] Integrar formulário com backend (e-mail / WhatsApp API)
+- [ ] Adicionar depoimentos de clientes
+- [ ] Implementar modal de agendamento (estrutura CSS já pronta em `modal.css`)
+- [ ] Analytics (Google Analytics / Meta Pixel)
+- [ ] Auditoria de acessibilidade (Lighthouse + WCAG)
+- [ ] Blog / artigos para SEO
 
 ## Autor
 
-Projeto desenvolvido para **Study English**.
-
-Se quiser evoluir este projeto com novas páginas, integrações ou automações, abra uma issue ou proposta de melhoria.
+Desenvolvido por **Ebener Santos** — fundador da CONVO.
 
 ## Licença
 
-Este projeto está protegido por **licença proprietária (All Rights Reserved)**.
-
-Consulte o arquivo `LICENSE` para as condições completas de uso, reprodução e distribuição.
+Licença proprietária — All Rights Reserved. Consulte o arquivo `LICENSE`.
