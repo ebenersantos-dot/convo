@@ -1,0 +1,69 @@
+/* ============================================================
+   CONVO — Buttons
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-sm);
+  border: 1px solid transparent;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.72rem 1.35rem;
+  cursor: pointer;
+  transition: transform var(--t), opacity var(--t), box-shadow var(--t),
+              background var(--t), border-color var(--t), color var(--t);
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--grad);
+  color: var(--cw);
+  box-shadow: 0 2px 8px rgba(123, 44, 191, 0.28);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 18px rgba(123, 44, 191, 0.38);
+}
+
+.btn-ghost {
+  border-color: var(--cg-300);
+  background: var(--cw);
+  color: var(--cg-800);
+}
+
+.btn-ghost:hover {
+  border-color: var(--cp-300);
+  color: var(--cp-500);
+  background: var(--cp-100);
+}
+
+/* Usado dentro de .cta-banner (fundo gradiente) */
+.btn-inverse {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cw);
+  color: var(--cp-600);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.78rem 1.65rem;
+  border-radius: var(--r-sm);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity var(--t), transform var(--t);
+}
+
+.btn-inverse:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}

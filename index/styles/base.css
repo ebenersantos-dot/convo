@@ -1,0 +1,75 @@
+/* ============================================================
+   CONVO — Base: Design Tokens + Reset
+   ============================================================ */
+
+:root {
+  /* Purple — assinatura da marca */
+  --cp-700: #5A189A;
+  --cp-600: #6A1FB0;
+  --cp-500: #7B2CBF; /* primary default */
+  --cp-400: #9D4EDD;
+  --cp-300: #C77DFF;
+  --cp-100: #F3E8FF;
+
+  /* Graphite — estrutura e texto */
+  --cg-900: #18181B; /* texto principal */
+  --cg-800: #27272A;
+  --cg-700: #3F3F46;
+  --cg-500: #71717A;
+  --cg-300: #D4D4D8;
+  --cg-100: #F4F4F5;
+
+  /* Base */
+  --cw: #FFFFFF;
+  --ci: #FAFAFA; /* canvas padrão */
+
+  /* Suporte */
+  --cs-500: #10B981;
+  --cs-100: #D1FAE5;
+
+  /* Gradiente — uso restrito: hero, CTA âncora */
+  --grad: linear-gradient(135deg, #5A189A 0%, #9D4EDD 100%);
+
+  /* Sistema */
+  --container: min(1280px, 92%);
+  --shadow-sm: 0 1px 3px rgba(24, 24, 27, .06), 0 1px 2px rgba(24, 24, 27, .04);
+  --shadow-md: 0 4px 20px rgba(24, 24, 27, .08), 0 1px 4px rgba(24, 24, 27, .04);
+  --r-pill: 999px;
+  --r-lg: 24px;
+  --r-md: 20px;
+  --r-sm: 16px;
+  --t: 200ms ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--cg-900);
+  background-color: var(--ci);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}

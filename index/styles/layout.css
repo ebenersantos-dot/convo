@@ -1,0 +1,20 @@
+/* ============================================================
+   CONVO — Layout
+   ============================================================ */
+
+.container {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.section-padding {
+  padding: 96px 0;
+}
+
+.section-padding-sm {
+  padding: 56px 0;
+}
+
+.section-surface {
+  background-color: var(--cg-100);
+}
