@@ -110,7 +110,7 @@
                 return;
             }
 
-            feedback.textContent = "Perfeito. Recebemos seus dados e entraremos em contato em breve.";
+            feedback.textContent = "Recebido. A gente retorna em até um dia útil.";
             feedback.classList.remove("error");
             form.reset();
         });
