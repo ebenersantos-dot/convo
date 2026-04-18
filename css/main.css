@@ -1,0 +1,14 @@
+/* ============================================================
+   CONVO — Design System Entry Point
+   A ordem dos imports define a cascata — não reordene sem razão.
+   ============================================================ */
+
+@import './modules/base.css';        /* tokens + reset                  */
+@import './modules/layout.css';      /* container, section utilities    */
+@import './modules/typography.css';  /* headings, p, eyebrow            */
+@import './modules/buttons.css';     /* btn, btn-primary, ghost, inverse */
+@import './modules/header.css';      /* header, nav, brand              */
+@import './modules/hero.css';        /* hero section                    */
+@import './modules/components.css';  /* cards, FAQ, contact, CTA, footer */
+@import './modules/modal.css';       /* modal                           */
+@import './modules/responsive.css';  /* animações + media queries       */
