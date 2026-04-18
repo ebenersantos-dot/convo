@@ -68,7 +68,7 @@
         if (!Number.isFinite(end)) return;
 
         let current = 0;
-        const duration = 900;
+        const duration = 2200;
         const start = performance.now();
 
         const step = function (now) {
