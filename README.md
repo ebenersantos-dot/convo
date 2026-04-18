@@ -87,7 +87,7 @@ font-family: 'Sora'  /* display / headings */
 font-family: 'Inter' /* UI / corpo */
 ```
 
-Diretrizes completas de marca, tom de voz e convenções de código estão documentadas em `CLAUDE.md`.
+Diretrizes completas de marca, tom de voz e convenções de código são de uso interno.
 
 ## Roadmap
 
