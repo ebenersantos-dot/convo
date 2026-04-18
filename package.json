@@ -1,0 +1,24 @@
+{
+  "name": "study-english-website",
+  "version": "1.0.0",
+  "description": "Site institucional da **CONVO** — plataforma de conversação em inglês para profissionais. Construído com HTML, CSS e JavaScript puro, sem dependências de framework.",
+  "homepage": "https://github.com/ebenersantos-dot/study-english-website#readme",
+  "bugs": {
+    "url": "https://github.com/ebenersantos-dot/study-english-website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebenersantos-dot/study-english-website.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^30.3.0",
+    "react": "^19.2.5"
+  }
+}
