@@ -11,8 +11,8 @@ const { sendContactNotification } = require("../config/mailer");
 
 // Valores aceitos nos selects do formulário.
 // Validar no backend é obrigatório: o HTML pode ser burlado.
-const NIVEIS = ["iniciante", "basico", "intermediario", "avancado", "nao-sei"];
-const DISPONIBILIDADES = ["manha", "tarde", "noite", "flexivel"];
+const NIVEIS = ["iniciante", "basico", "intermediario", "avancado"];
+const DISPONIBILIDADES = ["manha", "tarde", "noite", "variavel"];
 
 // Regex simples de e-mail: algo@algo.algo — suficiente aqui,
 // já que o e-mail real será verificado no primeiro retorno.

@@ -60,17 +60,45 @@ app.get("/api/health", function (req, res) {
     res.json({ status: "ok", uptime: process.uptime() });
 });
 
-// --- Arquivos estáticos ------------------------------------
+// --- Rotas limpas das páginas -------------------------------
 
-// Serve tudo a partir da raiz do projeto, então os caminhos
-// relativos das páginas (../css/main.css) continuam funcionando.
-app.use(express.static(path.join(__dirname), {
-    extensions: ["html"],
-}));
+// Mapa URL amigável → arquivo HTML. Uma única fonte da verdade:
+// para adicionar uma página, basta acrescentar uma linha aqui.
+const PAGES = {
+    "/inicio": "01-inicio-convo.html",
+    "/contato": "02-contato-convo.html",
+    "/sobre": "03-sobre-convo.html",
+    "/metodologia": "04-metodologia-convo.html",
+};
+
+Object.entries(PAGES).forEach(function ([route, file]) {
+    app.get(route, function (req, res) {
+        res.sendFile(path.join(__dirname, "index", file));
+    });
+
+    // URLs antigas (/index/01-inicio-convo.html) redirecionam
+    // permanentemente (301) para as novas — preserva links e SEO.
+    app.get("/index/" + file, function (req, res) {
+        res.redirect(301, route);
+    });
+});
 
 // Raiz do site → página inicial.
 app.get("/", function (req, res) {
-    res.redirect("/index/01-inicio-convo.html");
+    res.redirect("/inicio");
+});
+
+// --- Arquivos estáticos ------------------------------------
+
+// Serve css/, js/, img/ etc. a partir da raiz do projeto.
+app.use(express.static(path.join(__dirname)));
+
+// Qualquer rota desconhecida → página inicial (404 suave).
+app.use(function (req, res) {
+    if (req.path.startsWith("/api/")) {
+        return res.status(404).json({ ok: false, error: "Rota não encontrada." });
+    }
+    res.redirect("/inicio");
 });
 
 // --- Inicialização -----------------------------------------

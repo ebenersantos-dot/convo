@@ -6,10 +6,13 @@ Site institucional da **CONVO** — plataforma de conversação em inglês para 
 
 | Arquivo | Rota | Conteúdo |
 |---|---|---|
-| `01-inicio-convo.html` | Início | Hero, diferenciais, como funciona, CTA |
-| `02-contato-convo.html` | Contato | Formulário de solicitação de conversa inicial |
-| `03-sobre-convo.html` | Sobre | Manifesto, fundador, valores |
-| `04-metodologia-convo.html` | Metodologia | Pilares do método, competências, FAQ |
+| `01-inicio-convo.html` | `/inicio` | Hero, diferenciais, como funciona, CTA |
+| `02-contato-convo.html` | `/contato` | Formulário de solicitação de conversa inicial |
+| `03-sobre-convo.html` | `/sobre` | Manifesto, fundador, valores |
+| `04-metodologia-convo.html` | `/metodologia` | Pilares do método, competências, FAQ |
+
+URLs antigas (`/index/01-inicio-convo.html`) redirecionam com 301
+para as rotas limpas. `/` redireciona para `/inicio`.
 
 ## Funcionalidades
 
