@@ -36,6 +36,13 @@
     grid-template-columns: 1fr;
   }
 
+  /* Em coluna única, a foto (quadrada, width 100%) ocuparia a
+     largura toda do card. Limita o tamanho e centraliza. */
+  .profile-card img {
+    max-width: 260px;
+    margin-inline: auto;
+  }
+
   .skill-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

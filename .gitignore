@@ -2,3 +2,12 @@ CLAUDE.md
 .DS_Store
 **/.DS_Store
 .claude/
+
+# Ambiente e banco local
+.env
+backend/data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+node_modules/

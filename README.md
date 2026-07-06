@@ -61,15 +61,57 @@ study-english-website/
 
 ## Como rodar localmente
 
-**Opção 1 — direto no navegador**
+**Opção 1 — site completo com backend (recomendado)**
 
-Abra `index/01-inicio-convo.html` no browser.
+Requer Node.js 22.5+ (o banco usa o módulo embutido `node:sqlite`).
 
-**Opção 2 — Live Server (recomendado)**
+```bash
+npm install          # instala express, nodemailer, dotenv, express-rate-limit
+cp .env.example .env # preencha EMAIL_PASS (senha de app do Gmail)
+npm start            # http://localhost:3000
+```
+
+Sem `EMAIL_PASS`, o formulário funciona normalmente — os contatos são
+salvos no banco e apenas o e-mail de notificação é pulado.
+
+**Opção 2 — só o frontend (Live Server)**
 
 1. Abra o projeto no VS Code
 2. Clique com botão direito em `index/01-inicio-convo.html`
 3. Selecione **Open with Live Server**
+
+Nesta opção o formulário de contato precisa do backend rodando em
+paralelo (`npm start`) para os envios funcionarem.
+
+## Backend
+
+API em Express com SQLite (arquivo único em `backend/data/convo.db`,
+fora do Git). Estrutura MVC:
+
+```
+server.js                                ← entrada: static + API
+backend/
+├── config/
+│   ├── database.js                      ← conexão node:sqlite + schema
+│   └── mailer.js                        ← Nodemailer (Gmail via senha de app)
+├── models/contact_model.js              ← SQL isolado (prepared statements)
+├── controllers/contact_controller.js    ← validação + orquestração
+└── routes/contact_routes.js             ← POST /api/contact (rate limit 5/15min)
+```
+
+Fluxo do contato: valida → salva no banco (fonte da verdade) →
+envia e-mail para `letusconvo@gmail.com` → marca `email_enviado`.
+Se o e-mail falhar, o lead permanece no banco com `email_enviado = 0`.
+Proteções: honeypot anti-bot, rate limiting por IP, sanitização e
+validação server-side, prepared statements.
+
+### Deploy (Hostinger / letusconvo.com)
+
+1. Plano com suporte a Node.js (VPS ou plano Node) — hospedagem
+   compartilhada PHP não roda o backend.
+2. Node 22.5+, `npm install --omit=dev`, criar `.env` com `EMAIL_PASS`.
+3. Iniciar com `npm start` (ou PM2: `pm2 start server.js --name convo`).
+4. Apontar o domínio para a porta do app (proxy reverso no painel).
 
 ## Design system
 
@@ -91,7 +133,7 @@ Diretrizes completas de marca, tom de voz e convenções de código são de uso 
 
 ## Roadmap
 
-- [ ] Integrar formulário com backend (e-mail / WhatsApp API)
+- [x] Integrar formulário com backend (e-mail + banco SQLite)
 - [ ] Adicionar depoimentos de clientes
 - [ ] Implementar modal de agendamento (estrutura CSS já pronta em `modal.css`)
 - [ ] Analytics (Google Analytics / Meta Pixel)
