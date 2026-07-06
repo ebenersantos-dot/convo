@@ -12,3 +12,4 @@ backend/data/
 *.db-shm
 node_modules/
 api/config.php
+convo_public_html.zip
