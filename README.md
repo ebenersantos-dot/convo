@@ -108,13 +108,42 @@ Se o e-mail falhar, o lead permanece no banco com `email_enviado = 0`.
 Proteções: honeypot anti-bot, rate limiting por IP, sanitização e
 validação server-side, prepared statements.
 
-### Deploy (Hostinger / letusconvo.com)
+### Deploy (Hostinger compartilhado / letusconvo.com)
 
-1. Plano com suporte a Node.js (VPS ou plano Node) — hospedagem
-   compartilhada PHP não roda o backend.
-2. Node 22.5+, `npm install --omit=dev`, criar `.env` com `EMAIL_PASS`.
-3. Iniciar com `npm start` (ou PM2: `pm2 start server.js --name convo`).
-4. Apontar o domínio para a porta do app (proxy reverso no painel).
+A hospedagem compartilhada da Hostinger roda PHP, não Node.
+Por isso existem DOIS backends equivalentes no repositório:
+
+| Ambiente | Backend | Rotas limpas |
+|---|---|---|
+| Local (dev) | Node/Express (`npm start`) | `server.js` |
+| Produção (Hostinger) | PHP (`api/contact.php`) | `.htaccess` |
+
+Mesmas validações, mesmo honeypot, mesmo rate limit, mesmo
+e-mail. **Ao alterar opções do formulário, atualize os dois**
+(`contact_controller.js` e `contact.php`).
+
+**O que enviar para `public_html`** (File Manager ou FTP):
+
+```
+.htaccess
+api/          (contact.php, mailer.php, config.php)
+css/
+img/
+index/
+js/
+```
+
+Nada de `backend/`, `node_modules/`, `server.js`, `package*.json`
+— e se forem por engano, o `.htaccess` bloqueia o acesso externo.
+
+**Passos:**
+
+1. Limpe o `public_html` e envie os itens da lista acima.
+2. Confirme que `api/config.php` existe com a senha de app
+   (se não, copie `config.example.php` e preencha).
+3. Teste: `letusconvo.com/inicio` e envie o formulário.
+4. O banco é criado automaticamente em `convo_data/convo.db`,
+   um nível ACIMA do `public_html` (inacessível pela web).
 
 ## Design system
 

@@ -11,3 +11,4 @@ backend/data/
 *.db-wal
 *.db-shm
 node_modules/
+api/config.php

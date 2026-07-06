@@ -1,0 +1,47 @@
+# ============================================================
+# CONVO — Roteamento e proteção (Apache/LiteSpeed, Hostinger)
+# ============================================================
+# Faz na hospedagem compartilhada o que o server.js faz no Node:
+# URLs limpas, redirects e bloqueio de arquivos internos.
+# ============================================================
+
+Options -Indexes
+RewriteEngine On
+
+# --- HTTPS obrigatório ---------------------------------------
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# --- Raiz → página inicial -----------------------------------
+RewriteRule ^$ /inicio [R=302,L]
+
+# --- URLs antigas → limpas (301) ------------------------------
+# THE_REQUEST só casa com a URL pedida pelo navegador (externa),
+# nunca com reescritas internas — evita loop infinito.
+RewriteCond %{THE_REQUEST} \s/index/01-inicio-convo\.html [NC]
+RewriteRule ^ /inicio [R=301,L]
+RewriteCond %{THE_REQUEST} \s/index/02-contato-convo\.html [NC]
+RewriteRule ^ /contato [R=301,L]
+RewriteCond %{THE_REQUEST} \s/index/03-sobre-convo\.html [NC]
+RewriteRule ^ /sobre [R=301,L]
+RewriteCond %{THE_REQUEST} \s/index/04-metodologia-convo\.html [NC]
+RewriteRule ^ /metodologia [R=301,L]
+
+# --- API: /api/contact → contact.php (interno) ----------------
+RewriteRule ^api/contact$ api/contact.php [L]
+
+# --- Páginas limpas (reescrita interna, URL não muda) ----------
+RewriteRule ^inicio$ index/01-inicio-convo.html [L]
+RewriteRule ^contato$ index/02-contato-convo.html [L]
+RewriteRule ^sobre$ index/03-sobre-convo.html [L]
+RewriteRule ^metodologia$ index/04-metodologia-convo.html [L]
+
+# --- Bloqueia pastas internas (se forem enviadas por engano) ---
+RedirectMatch 404 ^/(backend|node_modules|\.git|convo_data)(/|$)
+
+# --- Bloqueia arquivos internos --------------------------------
+# config.php continua funcionando via require no PHP;
+# apenas o acesso direto pela web é negado.
+<FilesMatch "^(server\.js|App\.js|package\.json|package-lock\.json|README\.md|LICENSE|CLAUDE\.md|\.gitignore|\.env.*|config\.php|config\.example\.php|.*\.db(-wal|-shm|-journal)?)$">
+    Require all denied
+</FilesMatch>
